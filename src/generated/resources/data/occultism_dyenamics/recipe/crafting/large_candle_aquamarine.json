@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "occultism:large_candle"
+    },
+    {
+      "tag": "c:dyes/aquamarine"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "occultism_dyenamics:large_candle_aquamarine"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "occultism:chalk_pink_impure"
+    },
+    {
+      "item": "occultism:chalk_magenta_impure"
+    },
+    {
+      "tag": "c:dyes/rose"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "occultism_dyenamics:chalk_rose_impure"
+  }
+}

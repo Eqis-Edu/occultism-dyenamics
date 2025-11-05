@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "occultism_dyenamics:chalk_navy"
+    },
+    "title": {"translate": "advancements.occultism_dyenamics.chalks.navy.title"},
+    "description": {"color":"green","translate":"advancements.occultism_dyenamics.chalks.navy.description"}
+  },
+  "parent": "occultism_dyenamics:chalks/root",
+  "criteria": {
+    "chalk_navy": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "occultism_dyenamics:chalk_navy"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["chalk_navy"]],
+  "sends_telemetry_event": true
+}

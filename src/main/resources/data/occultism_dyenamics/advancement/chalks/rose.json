@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "occultism_dyenamics:chalk_rose"
+    },
+    "title": {"translate": "advancements.occultism_dyenamics.chalks.rose.title"},
+    "description": {"color":"green","translate":"advancements.occultism_dyenamics.chalks.rose.description"},
+    "frame": "goal"
+  },
+  "parent": "occultism_dyenamics:chalks/root",
+  "criteria": {
+    "chalk_rose": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "occultism_dyenamics:chalk_rose"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["chalk_rose"]],
+  "sends_telemetry_event": true
+}

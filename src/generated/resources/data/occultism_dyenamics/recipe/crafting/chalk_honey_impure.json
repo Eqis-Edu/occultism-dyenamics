@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "occultism:chalk_orange_impure"
+    },
+    {
+      "item": "occultism:chalk_yellow_impure"
+    },
+    {
+      "tag": "c:dyes/honey"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "occultism_dyenamics:chalk_honey_impure"
+  }
+}

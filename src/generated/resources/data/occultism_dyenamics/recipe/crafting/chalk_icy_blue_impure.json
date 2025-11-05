@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "occultism:chalk_light_blue_impure"
+    },
+    {
+      "tag": "c:dyes/icy_blue"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "occultism_dyenamics:chalk_icy_blue_impure"
+  }
+}

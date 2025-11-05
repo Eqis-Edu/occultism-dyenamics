@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "occultism:chalk_cyan_impure"
+    },
+    {
+      "item": "occultism:chalk_light_blue_impure"
+    },
+    {
+      "tag": "c:dyes/cherenkov"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "occultism_dyenamics:chalk_cherenkov_impure"
+  }
+}

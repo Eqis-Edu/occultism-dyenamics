@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "occultism:chalk_lime_impure"
+    },
+    {
+      "item": "occultism:chalk_green_impure"
+    },
+    {
+      "tag": "c:dyes/mint"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "occultism_dyenamics:chalk_mint_impure"
+  }
+}

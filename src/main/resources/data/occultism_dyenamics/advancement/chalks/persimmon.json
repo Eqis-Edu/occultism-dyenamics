@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "occultism_dyenamics:chalk_persimmon"
+    },
+    "title": {"translate": "advancements.occultism_dyenamics.chalks.persimmon.title"},
+    "description": {"color":"green","translate":"advancements.occultism_dyenamics.chalks.persimmon.description"},
+    "frame": "goal"
+  },
+  "parent": "occultism_dyenamics:chalks/root",
+  "criteria": {
+    "chalk_persimmon": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "occultism_dyenamics:chalk_persimmon"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["chalk_persimmon"]],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_large_candle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "occultism:large_candle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "occultism_dyenamics:crafting/large_candle_fluorescent"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_large_candle"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "occultism_dyenamics:crafting/large_candle_fluorescent"
+    ]
+  }
+}

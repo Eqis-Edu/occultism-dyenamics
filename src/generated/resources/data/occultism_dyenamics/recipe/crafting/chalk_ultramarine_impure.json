@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "occultism:chalk_blue_impure"
+    },
+    {
+      "item": "occultism:chalk_purple_impure"
+    },
+    {
+      "tag": "c:dyes/ultramarine"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "occultism_dyenamics:chalk_ultramarine_impure"
+  }
+}

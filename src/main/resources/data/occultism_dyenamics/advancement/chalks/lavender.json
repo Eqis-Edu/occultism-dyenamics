@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "occultism_dyenamics:chalk_lavender"
+    },
+    "title": {"translate": "advancements.occultism_dyenamics.chalks.lavender.title"},
+    "description": {"color":"green","translate":"advancements.occultism_dyenamics.chalks.lavender.description"}
+  },
+  "parent": "occultism_dyenamics:chalks/root",
+  "criteria": {
+    "chalk_lavender": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "occultism_dyenamics:chalk_lavender"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["chalk_lavender"]],
+  "sends_telemetry_event": true
+}

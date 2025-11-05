@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "occultism_dyenamics:item/chalk_base",
+    "layer1": "occultism_dyenamics:item/chalk_base_impure"
+  }
+}

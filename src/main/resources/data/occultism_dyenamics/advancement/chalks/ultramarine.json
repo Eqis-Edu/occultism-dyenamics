@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "occultism_dyenamics:chalk_ultramarine"
+    },
+    "title": {"translate": "advancements.occultism_dyenamics.chalks.ultramarine.title"},
+    "description": {"color":"green","translate":"advancements.occultism_dyenamics.chalks.ultramarine.description"},
+    "frame": "goal"
+  },
+  "parent": "occultism_dyenamics:chalks/root",
+  "criteria": {
+    "chalk_ultramarine": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "occultism_dyenamics:chalk_ultramarine"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["chalk_ultramarine"]],
+  "sends_telemetry_event": true
+}

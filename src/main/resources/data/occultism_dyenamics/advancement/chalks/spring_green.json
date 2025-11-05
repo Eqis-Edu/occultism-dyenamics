@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "occultism_dyenamics:chalk_spring_green"
+    },
+    "title": {"translate": "advancements.occultism_dyenamics.chalks.spring_green.title"},
+    "description": {"color":"green","translate":"advancements.occultism_dyenamics.chalks.spring_green.description"}
+  },
+  "parent": "occultism_dyenamics:chalks/root",
+  "criteria": {
+    "chalk_spring_green": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "occultism_dyenamics:chalk_spring_green"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["chalk_spring_green"]],
+  "sends_telemetry_event": true
+}

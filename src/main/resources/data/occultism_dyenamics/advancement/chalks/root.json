@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "id": "occultism_dyenamics:chalk_prismatic"
+    },
+    "title": {"translate": "advancements.occultism_dyenamics.chalks.root.title"},
+    "description": {"color":"#CCCCCC","translate":"advancements.occultism_dyenamics.chalks.root.description"},
+    "background": "occultism:textures/block/otherrock.png",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": null,
+  "criteria": {
+    "always": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

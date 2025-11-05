@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "occultism_dyenamics:chalk_aquamarine"
+    },
+    "title": {"translate": "advancements.occultism_dyenamics.chalks.aquamarine.title"},
+    "description": {"color":"green","translate":"advancements.occultism_dyenamics.chalks.aquamarine.description"}
+  },
+  "parent": "occultism_dyenamics:chalks/root",
+  "criteria": {
+    "chalk_aquamarine": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "occultism_dyenamics:chalk_aquamarine"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["chalk_aquamarine"]],
+  "sends_telemetry_event": true
+}

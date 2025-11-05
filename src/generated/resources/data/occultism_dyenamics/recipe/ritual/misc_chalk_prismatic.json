@@ -1,0 +1,59 @@
+{
+  "type": "occultism:ritual",
+  "activation_item": {
+    "item": "occultism:brush"
+  },
+  "duration": 780,
+  "entity_to_sacrifice": {
+    "display_name": "ritual.occultism.sacrifice.sheep",
+    "tag": "c:sheep"
+  },
+  "ingredients": [
+    {
+      "item": "occultism_dyenamics:chalk_lavender"
+    },
+    {
+      "item": "occultism_dyenamics:chalk_navy"
+    },
+    {
+      "item": "occultism_dyenamics:chalk_bubblegum"
+    },
+    {
+      "item": "occultism_dyenamics:chalk_amber"
+    },
+    {
+      "item": "occultism_dyenamics:chalk_conifer"
+    },
+    {
+      "item": "occultism_dyenamics:chalk_icy_blue"
+    },
+    {
+      "item": "occultism_dyenamics:chalk_maroon"
+    },
+    {
+      "item": "occultism_dyenamics:chalk_wine"
+    },
+    {
+      "item": "occultism_dyenamics:chalk_fluorescent"
+    },
+    {
+      "item": "occultism_dyenamics:chalk_spring_green"
+    },
+    {
+      "item": "occultism_dyenamics:chalk_peach"
+    },
+    {
+      "item": "occultism_dyenamics:chalk_aquamarine"
+    }
+  ],
+  "pentacle_id": "occultism:contact_eldritch_spirit",
+  "result": {
+    "count": 1,
+    "id": "occultism_dyenamics:chalk_prismatic"
+  },
+  "ritual_dummy": {
+    "count": 1,
+    "id": "occultism_dyenamics:ritual_dummy/misc_chalk_prismatic"
+  },
+  "ritual_type": "occultism:craft"
+}
