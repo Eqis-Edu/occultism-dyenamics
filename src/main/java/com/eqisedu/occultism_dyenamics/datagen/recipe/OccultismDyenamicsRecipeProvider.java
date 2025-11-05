@@ -17,23 +17,20 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
-public class OccultismRecipeProvider extends RecipeProvider {
-    public OccultismRecipeProvider(PackOutput p_248933_, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+public class OccultismDyenamicsRecipeProvider extends RecipeProvider {
+    public OccultismDyenamicsRecipeProvider(PackOutput p_248933_, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(p_248933_, lookupProvider);
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput pRecipeOutput, HolderLookup.Provider holderLookup) {
-        this.ritualRecipes(pRecipeOutput, holderLookup);
+    protected void buildRecipes(@NotNull RecipeOutput pRecipeOutput, @NotNull HolderLookup.Provider holderLookup) {
         this.craftingRecipes(pRecipeOutput);
         spiritFireRecipes(pRecipeOutput);
-    }
-
-    private void ritualRecipes(RecipeOutput recipeOutput, HolderLookup.Provider registries) {
-        RitualRecipes.ritualRecipes(recipeOutput, registries);
+        RitualRecipes.ritualRecipes(pRecipeOutput);
     }
 
     private void craftingRecipes(RecipeOutput pRecipeOutput) {

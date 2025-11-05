@@ -11,6 +11,7 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -21,7 +22,7 @@ public class OccultismDyenamicsItemTagProvider extends ItemTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider provider) {
+    protected void addTags(@NotNull HolderLookup.Provider provider) {
         this.tag(ItemTags.DYEABLE).add(OccultismDyenamicsItems.CHALK_CHOSEN.get());
 
         this.tag(OccultismTags.makeItemTag("occultism_dyenamics:final_chalk"))

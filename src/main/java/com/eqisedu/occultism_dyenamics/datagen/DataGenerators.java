@@ -25,7 +25,7 @@ package com.eqisedu.occultism_dyenamics.datagen;
 import com.eqisedu.occultism_dyenamics.datagen.lang.ENUSProvider;
 import com.eqisedu.occultism_dyenamics.datagen.loot.OccultismDyenamicsBlockLoot;
 import com.eqisedu.occultism_dyenamics.datagen.loot.OccultismDyenamicsLootTableProvider;
-import com.eqisedu.occultism_dyenamics.datagen.recipe.OccultismRecipeProvider;
+import com.eqisedu.occultism_dyenamics.datagen.recipe.OccultismDyenamicsRecipeProvider;
 import com.eqisedu.occultism_dyenamics.datagen.tags.OccultismDyenamicsBlockTagProvider;
 import com.eqisedu.occultism_dyenamics.datagen.tags.OccultismDyenamicsItemTagProvider;
 import net.minecraft.data.DataGenerator;
@@ -49,7 +49,7 @@ public class DataGenerators {
                 new OccultismDyenamicsLootTableProvider(generator.getPackOutput(), Set.of(), List.of(
                         new LootTableProvider.SubProviderEntry(OccultismDyenamicsBlockLoot::new, LootContextParamSets.BLOCK)
                 ), event.getLookupProvider()));
-        generator.addProvider(event.includeServer(), new OccultismRecipeProvider(generator.getPackOutput(), event.getLookupProvider()));
+        generator.addProvider(event.includeServer(), new OccultismDyenamicsRecipeProvider(generator.getPackOutput(), event.getLookupProvider()));
 
         OccultismDyenamicsBlockTagProvider forgeBlockProvider = new OccultismDyenamicsBlockTagProvider(generator.getPackOutput(), event.getLookupProvider(), event.getExistingFileHelper());
         generator.addProvider(event.includeServer(), forgeBlockProvider);

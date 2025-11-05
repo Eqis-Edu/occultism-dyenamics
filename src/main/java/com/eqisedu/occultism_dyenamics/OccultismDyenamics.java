@@ -24,7 +24,7 @@ package com.eqisedu.occultism_dyenamics;
 
 import com.eqisedu.occultism_dyenamics.config.OccultismDyenamicsClientConfig;
 import com.eqisedu.occultism_dyenamics.handlers.ClientSetupEventHandler;
-import com.eqisedu.occultism_dyenamics.registry.OccultismCreativeModeTabs;
+import com.eqisedu.occultism_dyenamics.registry.OccultismDyenamicsCreativeModeTabs;
 import com.eqisedu.occultism_dyenamics.registry.OccultismDyenamicsBlockEntities;
 import com.eqisedu.occultism_dyenamics.registry.OccultismDyenamicsBlocks;
 import com.eqisedu.occultism_dyenamics.registry.OccultismDyenamicsItems;
@@ -52,7 +52,7 @@ public class OccultismDyenamics {
         OccultismDyenamicsBlocks.BLOCKS.register(modEventBus);
         OccultismDyenamicsItems.ITEMS.register(modEventBus);
         OccultismDyenamicsBlockEntities.BLOCK_ENTITIES.register(modEventBus);
-        OccultismCreativeModeTabs.CREATIVE_MODE_TABS.register(modEventBus);
+        OccultismDyenamicsCreativeModeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 
         if (FMLEnvironment.dist == Dist.CLIENT) {
             ClientSetupEventHandler.registerConfigScreen(modContainer);

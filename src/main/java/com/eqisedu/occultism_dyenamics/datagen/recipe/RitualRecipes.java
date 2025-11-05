@@ -27,7 +27,7 @@ public abstract class RitualRecipes extends RecipeProvider {
         super(p_248933_, lookupProvider);
     }
 
-    public static void ritualRecipes(RecipeOutput recipeOutput, HolderLookup.Provider registries) {
+    public static void ritualRecipes(RecipeOutput recipeOutput) {
         RitualRecipeBuilder.ritualRecipeBuilder(Ingredient.of(OccultismItems.BRUSH),
                         new ItemStack(OccultismDyenamicsItems.CHALK_PRISMATIC.get()),
                         new ItemStack(OccultismDyenamicsItems.RITUAL_DUMMY_FORGE_CHALK_PRISMATIC.get()),
