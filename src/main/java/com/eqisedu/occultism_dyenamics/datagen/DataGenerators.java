@@ -22,6 +22,7 @@
 
 package com.eqisedu.occultism_dyenamics.datagen;
 
+import com.eqisedu.occultism_dyenamics.OccultismDyenamics;
 import com.eqisedu.occultism_dyenamics.datagen.lang.ENUSProvider;
 import com.eqisedu.occultism_dyenamics.datagen.loot.OccultismDyenamicsBlockLoot;
 import com.eqisedu.occultism_dyenamics.datagen.loot.OccultismDyenamicsLootTableProvider;
@@ -38,7 +39,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 import java.util.List;
 import java.util.Set;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = OccultismDyenamics.MODID)
 public class DataGenerators {
 
     @SubscribeEvent
@@ -59,7 +60,6 @@ public class DataGenerators {
 
         var enUSProvider = new ENUSProvider(generator.getPackOutput());
 
-        //Important: Lang provider (in this case enus) needs to be added after the book provider to process the texts added by the book provider
         generator.addProvider(event.includeClient(), enUSProvider);
     }
 }

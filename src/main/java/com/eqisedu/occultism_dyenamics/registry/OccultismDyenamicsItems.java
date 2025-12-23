@@ -1,30 +1,7 @@
-/*
- * MIT License
- *
- * Copyright 2020 klikli-dev
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
- * associated documentation files (the "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
- * of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following
- * conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial
- * portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
- * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
- * PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
- * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
- * OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- */
-
 package com.eqisedu.occultism_dyenamics.registry;
 
 import com.eqisedu.occultism_dyenamics.OccultismDyenamics;
 import com.eqisedu.occultism_dyenamics.common.item.tool.ChosenChalkItem;
-import com.eqisedu.occultism_dyenamics.common.item.tool.PrismaticChalkItem;
 import com.klikli_dev.occultism.common.item.DummyTooltipItem;
 import com.klikli_dev.occultism.common.item.tool.ChalkItem;
 import net.minecraft.world.item.Item;
@@ -92,14 +69,13 @@ public class OccultismDyenamicsItems {
                     OccultismDyenamicsBlocks.CHALK_GLYPH_PERSIMMON.get()));
 
     public static final DeferredItem<Item> CHALK_PRISMATIC = ITEMS.register("chalk_prismatic",
-            () -> new PrismaticChalkItem(defaultProperties().stacksTo(1).rarity(Rarity.EPIC),
-                    OccultismDyenamicsBlocks.CHALK_GLYPH_PRISMATIC.get()));
+            () -> new ChalkItem(defaultProperties().stacksTo(1).rarity(Rarity.EPIC).fireResistant(),
+                    OccultismDyenamicsBlocks.CHALK_GLYPH_PRISMATIC.get(), true));
     public static final DeferredItem<Item> CHALK_MULTICOLORED = ITEMS.register("chalk_multicolored",
-            () -> new PrismaticChalkItem(defaultProperties().stacksTo(1).rarity(Rarity.EPIC),
-                    OccultismDyenamicsBlocks.CHALK_GLYPH_MULTICOLORED.get()));
-
+            () -> new ChalkItem(defaultProperties().stacksTo(1).rarity(Rarity.EPIC).fireResistant(),
+                    OccultismDyenamicsBlocks.CHALK_GLYPH_MULTICOLORED.get(), true));
     public static final DeferredItem<Item> CHALK_CHOSEN = ITEMS.register("chalk_chosen",
-            () -> new ChosenChalkItem(defaultProperties().stacksTo(1).rarity(Rarity.EPIC),
+            () -> new ChosenChalkItem(defaultProperties().stacksTo(1).rarity(Rarity.EPIC).fireResistant(),
                     OccultismDyenamicsBlocks.CHALK_GLYPH_CHOSEN.get()));
 
     public static final DeferredItem<Item> CHALK_HONEY_IMPURE = ITEMS.register("chalk_honey_impure",

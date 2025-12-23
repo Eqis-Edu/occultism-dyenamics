@@ -4,7 +4,7 @@ An addon for Occultism that as new chalks using dyenamics colors.
 
 ## Curseforge
 
-https://www.curseforge.com/minecraft/mc-mods/occultism-dyenamics
+https://www.curseforge.com/minecraft/mc-mods/occultism-dyenamics-chalks
 
 ## Licensing
 

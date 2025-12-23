@@ -55,14 +55,14 @@ public class ChosenGlyphBlockEntity extends BlockEntity {
     }
 
     @Override
-    public @NotNull CompoundTag getUpdateTag(HolderLookup.Provider provider) {
+    public @NotNull CompoundTag getUpdateTag(@NotNull HolderLookup.Provider provider) {
         CompoundTag tag = super.getUpdateTag(provider);
         tag.putInt("color", this.color);
         return tag;
     }
 
     @Override
-    public void handleUpdateTag(CompoundTag tag, HolderLookup.Provider provider) {
+    public void handleUpdateTag(CompoundTag tag, @NotNull HolderLookup.Provider provider) {
         this.color = tag.getInt("color");
     }
 
@@ -77,10 +77,8 @@ public class ChosenGlyphBlockEntity extends BlockEntity {
     }
 
     @Override
-    public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt, HolderLookup.Provider provider) {
+    public void onDataPacket(@NotNull Connection net, ClientboundBlockEntityDataPacket pkt, @NotNull HolderLookup.Provider provider) {
         CompoundTag tag = pkt.getTag();
-        if (tag != null) {
-            this.color = tag.getInt("color");
-        }
+        this.color = tag.getInt("color");
     }
 }

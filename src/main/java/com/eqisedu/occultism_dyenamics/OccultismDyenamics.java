@@ -24,9 +24,9 @@ package com.eqisedu.occultism_dyenamics;
 
 import com.eqisedu.occultism_dyenamics.config.OccultismDyenamicsClientConfig;
 import com.eqisedu.occultism_dyenamics.handlers.ClientSetupEventHandler;
-import com.eqisedu.occultism_dyenamics.registry.OccultismDyenamicsCreativeModeTabs;
 import com.eqisedu.occultism_dyenamics.registry.OccultismDyenamicsBlockEntities;
 import com.eqisedu.occultism_dyenamics.registry.OccultismDyenamicsBlocks;
+import com.eqisedu.occultism_dyenamics.registry.OccultismDyenamicsCreativeModeTabs;
 import com.eqisedu.occultism_dyenamics.registry.OccultismDyenamicsItems;
 import com.mojang.logging.LogUtils;
 import net.neoforged.api.distmarker.Dist;

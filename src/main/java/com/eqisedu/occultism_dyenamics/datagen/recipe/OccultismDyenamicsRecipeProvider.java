@@ -228,27 +228,27 @@ public class OccultismDyenamicsRecipeProvider extends RecipeProvider {
     }
 
     private static void spiritFireRecipes(RecipeOutput pRecipeOutput) {
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_HONEY_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_HONEY.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_MINT_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_MINT.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_LAVENDER_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_LAVENDER.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_NAVY_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_NAVY.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_ICY_BLUE_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_ICY_BLUE.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_SPRING_GREEN_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_SPRING_GREEN.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_ULTRAMARINE_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_ULTRAMARINE.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_CONIFER_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_CONIFER.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_AMBER_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_AMBER.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_FLUORESCENT_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_FLUORESCENT.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_MAROON_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_MAROON.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_ROSE_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_ROSE.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_CHERENKOV_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_CHERENKOV.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_WINE_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_WINE.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_BUBBLEGUM_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_BUBBLEGUM.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_PEACH_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_PEACH.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_AQUAMARINE_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_AQUAMARINE.asItem(), pRecipeOutput);
-        spiritfireTransmute(OccultismDyenamicsItems.CHALK_PERSIMMON_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_PERSIMMON.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_HONEY_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_HONEY.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_MINT_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_MINT.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_LAVENDER_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_LAVENDER.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_NAVY_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_NAVY.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_ICY_BLUE_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_ICY_BLUE.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_SPRING_GREEN_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_SPRING_GREEN.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_ULTRAMARINE_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_ULTRAMARINE.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_CONIFER_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_CONIFER.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_AMBER_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_AMBER.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_FLUORESCENT_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_FLUORESCENT.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_MAROON_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_MAROON.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_ROSE_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_ROSE.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_CHERENKOV_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_CHERENKOV.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_WINE_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_WINE.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_BUBBLEGUM_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_BUBBLEGUM.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_PEACH_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_PEACH.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_AQUAMARINE_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_AQUAMARINE.asItem(), pRecipeOutput);
+        spiritFireTransmute(OccultismDyenamicsItems.CHALK_PERSIMMON_IMPURE.asItem(), OccultismDyenamicsItems.CHALK_PERSIMMON.asItem(), pRecipeOutput);
     }
 
-    protected static void spiritfireTransmute(Item input, Item output, RecipeOutput pRecipeOutput){
+    protected static void spiritFireTransmute(Item input, Item output, RecipeOutput pRecipeOutput){
         SpiritFireRecipeBuilder.spiritFireRecipe(Ingredient.of(input), new ItemStack(output))
                 .unlockedBy("has_" + input.toString().replace("minecraft:","").replace("occultism:",""), has(input))
                 .save(pRecipeOutput, ResourceLocation.fromNamespaceAndPath(OccultismDyenamics.MODID, "spirit_fire/" + output.toString().replace("occultism_dyenamics:","")));

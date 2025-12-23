@@ -1,37 +1,16 @@
-/*
- * MIT License
- *
- * Copyright 2020 klikli-dev
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
- * associated documentation files (the "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
- * of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following
- * conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial
- * portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
- * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
- * PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
- * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
- * OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- */
-
 package com.eqisedu.occultism_dyenamics.handlers;
 
 import com.eqisedu.occultism_dyenamics.OccultismDyenamics;
 import com.eqisedu.occultism_dyenamics.registry.OccultismDyenamicsBlocks;
 import com.eqisedu.occultism_dyenamics.registry.OccultismDyenamicsItems;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.component.DyedItemColor;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 
-@EventBusSubscriber(modid = OccultismDyenamics.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(modid = OccultismDyenamics.MODID, value = Dist.CLIENT)
 public class ColorEventHandler {
 
     //region Static Methods
@@ -178,7 +157,7 @@ public class ColorEventHandler {
                         OccultismDyenamicsItems.CHALK_HONEY.get(), OccultismDyenamicsItems.CHALK_HONEY_IMPURE.get(), OccultismDyenamicsBlocks.LARGE_CANDLE_HONEY.asItem());
         event.getItemColors()
                 .register((stack, tintIndex) ->
-                                DyedItemColor.getOrDefault(stack, 0xFFFFFFFF),
+                                DyedItemColor.getOrDefault(stack, 0xFF000000 + RandomSource.create().nextInt(16777216)),
                         OccultismDyenamicsItems.CHALK_CHOSEN.get());
 
         OccultismDyenamics.LOGGER.info("Item color registration complete.");

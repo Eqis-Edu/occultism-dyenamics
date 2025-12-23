@@ -1,25 +1,3 @@
-/*
- * MIT License
- *
- * Copyright 2021 vemerion, klikli-dev
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
- * associated documentation files (the "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
- * of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following
- * conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial
- * portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
- * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
- * PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
- * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
- * OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- */
-
 package com.eqisedu.occultism_dyenamics.datagen.lang;
 
 import com.eqisedu.occultism_dyenamics.OccultismDyenamics;
@@ -90,11 +68,13 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
         this.addItem(OccultismDyenamicsItems.CHALK_PERSIMMON, "Persimmon Chalk");
         this.addAutoTooltip(OccultismDyenamicsItems.CHALK_PERSIMMON, "Can replace: Red and Brown");
         this.addItem(OccultismDyenamicsItems.CHALK_PRISMATIC, "Prismatic Chalk");
-        this.addAutoTooltip(OccultismDyenamicsItems.CHALK_PRISMATIC, "Shift + Right Click in a glyph to erase");
+        this.addAutoTooltip(OccultismDyenamicsItems.CHALK_PRISMATIC, "Can replace any chalk glyph.\nShift + Right Click in a glyph to erase.\nIt can take on the appearance of any dyenamic colored glyph.");
         this.addItem(OccultismDyenamicsItems.CHALK_MULTICOLORED, "Multicolored Chalk");
-        this.addAutoTooltip(OccultismDyenamicsItems.CHALK_MULTICOLORED, "Shift + Right Click in a glyph to erase");
+        this.addAutoTooltip(OccultismDyenamicsItems.CHALK_MULTICOLORED, "Can replace any chalk glyph.\nShift + Right Click in a glyph to erase.\nIt can take on the appearance of any glyph.");
         this.addItem(OccultismDyenamicsItems.CHALK_CHOSEN, "The Chosen Chalk");
-        this.addAutoTooltip(OccultismDyenamicsItems.CHALK_CHOSEN, "Shift + Right Click in a glyph to erase");
+        this.add("item.occultism_dyenamics.chalk_chosen_glitch", "The Glitch Chalk");
+        this.addAutoTooltip(OccultismDyenamicsItems.CHALK_CHOSEN, "Can replace any chalk glyph.\nShift + Right Click in a glyph to erase.\nIt can be dyed like a leather armor.");
+        this.add("item.occultism_dyenamics.chalk_chosen_glitch.auto_tooltip", "Can replace any chalk glyph.\nShift + Right Click in a glyph to erase.\nIt can be dyed like a leather armor.");
         this.addItem(OccultismDyenamicsItems.CHALK_ICY_BLUE_IMPURE, "Impure Icy Blue Chalk");
         this.addItem(OccultismDyenamicsItems.CHALK_SPRING_GREEN_IMPURE, "Impure Spring Green Chalk");
         this.addItem(OccultismDyenamicsItems.CHALK_AMBER_IMPURE, "Impure Amber Chalk");
@@ -212,7 +192,7 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
     private void addRitualDummies() {
         this.autoDummyFactory(OccultismDyenamicsItems.RITUAL_DUMMY_FORGE_CHALK_PRISMATIC, "Forge Prismatic Chalk", "Eldritch", "Eldritch Spirits will forge a prismatic chalk, substitute any chalk.");
         this.autoDummyFactory(OccultismDyenamicsItems.RITUAL_DUMMY_FORGE_CHALK_MULTICOLORED, "Forge Multicolored Chalk", "Eldritch", "Eldritch Spirits will forge a multicolored chalk, substitute any chalk.");
-        this.autoDummyFactory(OccultismDyenamicsItems.RITUAL_DUMMY_FORGE_CHALK_CHOSEN, "Forge The Chosen Chalk", "Eldritch", "Eldritch Spirits will forge a chosen chalk, substitute any chalk with any rgb color.");
+        this.autoDummyFactory(OccultismDyenamicsItems.RITUAL_DUMMY_FORGE_CHALK_CHOSEN, "Forge The Glitch Chalk", "Eldritch", "Eldritch Spirits will forge a glitch chalk, substitute any chalk with any rgb color. Dye it to get The Chosen Chalk.");
     }
 
     public void autoDummyFactory(DeferredItem<Item> dummy, String name, String tier, String description) {

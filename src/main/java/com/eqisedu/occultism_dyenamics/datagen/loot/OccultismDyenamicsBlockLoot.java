@@ -24,9 +24,9 @@ public class OccultismDyenamicsBlockLoot extends BlockLootSubProvider {
     }
 
     @Override
-    public void generate(BiConsumer<ResourceKey<LootTable>, LootTable.Builder> pGenerator) {
+    public void generate(@NotNull BiConsumer<ResourceKey<LootTable>, LootTable.Builder> pGenerator) {
         this.generate();
-        this.map.forEach(pGenerator::accept);
+        this.map.forEach(pGenerator);
     }
 
     @Override

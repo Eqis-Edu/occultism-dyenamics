@@ -1,25 +1,3 @@
-/*
- * MIT License
- *
- * Copyright 2020 klikli-dev
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
- * associated documentation files (the "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
- * of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following
- * conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial
- * portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
- * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
- * PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
- * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
- * OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- */
-
 package com.eqisedu.occultism_dyenamics.common.block;
 
 import com.eqisedu.occultism_dyenamics.OccultismDyenamics;
@@ -96,13 +74,38 @@ public class PrismaticGlyphBlock extends ChalkGlyphBlock {
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         BlockPos pos = context.getClickedPos();
         int sign = context.getLevel().getRandom().nextInt(MAX_SIGN + 1);
-        int cor = 0;
+        int cor = RandomSource.create().nextIntBetweenInclusive(0, 17);
         boolean cc = this.cycle;
         BlockState current = context.getLevel().getBlockState(pos);
         if (current.getBlock() == this) {
             sign = (current.getValue(SIGN) + 1) % (MAX_SIGN + 1);
             cor = current.getValue(COLOR);
             cc = current.getValue(CYCLE);
+        }
+        Player player = context.getPlayer();
+        if (player != null) {
+            ItemStack stack = context.getHand().equals(InteractionHand.MAIN_HAND) ?
+                    player.getItemInHand(InteractionHand.OFF_HAND) :
+                    player.getItemInHand(InteractionHand.MAIN_HAND) ;
+            if (stack.is(OccultismTags.makeItemTag("c:dyes/honey"))) { cor = 0; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/mint"))) { cor = 1; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/lavender"))) { cor = 2; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/navy"))) { cor = 3; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/amber"))) { cor = 4; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/bubblegum"))) { cor = 5; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/conifer"))) { cor = 6; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/icy_blue"))) { cor = 7; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/ultramarine"))) { cor = 8; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/maroon"))) { cor = 9; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/wine"))) { cor = 10; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/fluorescent"))) { cor = 11; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/rose"))) { cor = 12; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/cherenkov"))) { cor = 13; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/peach"))) { cor = 14; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/spring_green"))) { cor = 15; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/aquamarine"))) { cor = 16; cc = false;}
+            else if (stack.is(OccultismTags.makeItemTag("c:dyes/persimmon"))) { cor = 17; cc = false;}
+            else if (stack.is(OccultismItems.SPIRIT_ATTUNED_GEM)) {cc = false;}
         }
         return this.defaultBlockState().setValue(COLOR, cor).setValue(CYCLE, cc).setValue(SIGN, sign)
                 .setValue(BlockStateProperties.HORIZONTAL_FACING,

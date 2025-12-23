@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.ProblemReporter;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.ValidationContext;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.Set;
@@ -19,7 +20,9 @@ public class OccultismDyenamicsLootTableProvider extends LootTableProvider {
     }
 
     @Override
-    protected void validate(WritableRegistry<LootTable> writableregistry, ValidationContext validationcontext, ProblemReporter.Collector problemreporter$collector) {
+    protected void validate(@NotNull WritableRegistry<LootTable> writableregistry,
+                            @NotNull ValidationContext validationcontext,
+                            @NotNull ProblemReporter.Collector problemreporter$collector) {
         //Just don't validate
     }
 }

@@ -1,29 +1,8 @@
-/*
- * MIT License
- *
- * Copyright 2020 klikli-dev
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
- * associated documentation files (the "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
- * of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following
- * conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial
- * portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
- * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
- * PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
- * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
- * OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- */
-
 package com.eqisedu.occultism_dyenamics.registry;
 
 import com.eqisedu.occultism_dyenamics.OccultismDyenamics;
 import com.eqisedu.occultism_dyenamics.common.block.ChosenGlyphBlock;
+import com.eqisedu.occultism_dyenamics.common.block.MulticoloredGlyphBlock;
 import com.eqisedu.occultism_dyenamics.common.block.PrismaticGlyphBlock;
 import com.klikli_dev.occultism.common.block.ChalkGlyphBlock;
 import com.klikli_dev.occultism.common.block.LargeCandleBlock;
@@ -92,8 +71,8 @@ public class OccultismDyenamicsBlocks {
 
     public static final DeferredBlock<PrismaticGlyphBlock> CHALK_GLYPH_PRISMATIC = register("chalk_glyph_prismatic",
             () -> new PrismaticGlyphBlock(GLYPH_PROPERTIES, true, OccultismDyenamicsItems.CHALK_PRISMATIC), false);
-    public static final DeferredBlock<PrismaticGlyphBlock> CHALK_GLYPH_MULTICOLORED = register("chalk_glyph_multicolored",
-            () -> new PrismaticGlyphBlock(GLYPH_PROPERTIES, false, OccultismDyenamicsItems.CHALK_MULTICOLORED), false);
+    public static final DeferredBlock<MulticoloredGlyphBlock> CHALK_GLYPH_MULTICOLORED = register("chalk_glyph_multicolored",
+            () -> new MulticoloredGlyphBlock(GLYPH_PROPERTIES, true, OccultismDyenamicsItems.CHALK_MULTICOLORED), false);
     public static final DeferredBlock<ChosenGlyphBlock> CHALK_GLYPH_CHOSEN = register("chalk_glyph_chosen",
             () -> new ChosenGlyphBlock(GLYPH_PROPERTIES, OccultismDyenamicsItems.CHALK_CHOSEN), false);
 

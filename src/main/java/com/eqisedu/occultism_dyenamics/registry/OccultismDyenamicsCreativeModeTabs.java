@@ -17,7 +17,7 @@ public class OccultismDyenamicsCreativeModeTabs {
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.occultism_dyenamics"))
                     .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
-                    .icon(() -> OccultismDyenamicsItems.CHALK_HONEY.get().getDefaultInstance())
+                    .icon(() -> OccultismDyenamicsItems.CHALK_MULTICOLORED.get().getDefaultInstance())
                     .displayItems((parameters, output) -> {
                         //General items and blocks
                         OccultismDyenamicsItems.ITEMS.getEntries().forEach(i -> {

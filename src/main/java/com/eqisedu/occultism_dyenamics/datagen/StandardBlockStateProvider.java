@@ -1,28 +1,8 @@
-/*
- * MIT License
- *
- * Copyright 2020 klikli-dev, McJty
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
- * associated documentation files (the "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
- * of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following
- * conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial
- * portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
- * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
- * PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
- * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
- * OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- */
-
 package com.eqisedu.occultism_dyenamics.datagen;
 
 import com.eqisedu.occultism_dyenamics.OccultismDyenamics;
+import com.eqisedu.occultism_dyenamics.common.block.ChosenGlyphBlock;
+import com.eqisedu.occultism_dyenamics.common.block.MulticoloredGlyphBlock;
 import com.eqisedu.occultism_dyenamics.common.block.PrismaticGlyphBlock;
 import com.eqisedu.occultism_dyenamics.registry.OccultismDyenamicsBlocks;
 import com.klikli_dev.occultism.common.block.ChalkGlyphBlock;
@@ -45,15 +25,23 @@ public class StandardBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        //Generate blockstates for the glyphs
         OccultismDyenamicsBlocks.BLOCKS.getEntries().stream()
                 .map(DeferredHolder::get)
-                .filter(block -> block instanceof ChalkGlyphBlock && !(block instanceof PrismaticGlyphBlock))
+                .filter(block -> block instanceof ChalkGlyphBlock &&
+                        !(block instanceof PrismaticGlyphBlock || block instanceof MulticoloredGlyphBlock || block instanceof ChosenGlyphBlock))
                 .forEach(this::generateGlyphBlockState);
         OccultismDyenamicsBlocks.BLOCKS.getEntries().stream()
                 .map(DeferredHolder::get)
                 .filter(block -> block instanceof PrismaticGlyphBlock)
                 .forEach(this::generateRainbowGlyphBlockState);
+        OccultismDyenamicsBlocks.BLOCKS.getEntries().stream()
+                .map(DeferredHolder::get)
+                .filter(block -> block instanceof MulticoloredGlyphBlock)
+                .forEach(this::generateMulticoloredGlyphBlockState);
+        OccultismDyenamicsBlocks.BLOCKS.getEntries().stream()
+                .map(DeferredHolder::get)
+                .filter(block -> block instanceof ChosenGlyphBlock)
+                .forEach(this::generateChosenGlyphBlockState);
         OccultismDyenamicsBlocks.BLOCKS.getEntries().stream()
                 .map(DeferredHolder::get)
                 .filter(block -> block instanceof LargeCandleBlock)
@@ -70,18 +58,12 @@ public class StandardBlockStateProvider extends BlockStateProvider {
                 .getExistingFile(this.modLoc("block/chalk_glyph/chalk_glyph"));
         this.getVariantBuilder(block)
                 .forAllStates(state -> {
-                    //this is called for every state combination
-                    //create a child model for each glyph texture option
                     int sign = state.getValue(ChalkGlyphBlock.SIGN);
                     ModelFile subModel = this.models().getBuilder("block/chalk_glyph/" + sign).parent(parent)
                             .texture("texture", this.modLoc("block/chalk_glyph/" + sign));
-
                     return ConfiguredModel.builder()
-                            //load the child model
                             .modelFile(subModel)
-                            //
-                            .rotationY((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING)
-                                    .toYRot())
+                            .rotationY((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot())
                             .build();
                 });
     }
@@ -90,19 +72,39 @@ public class StandardBlockStateProvider extends BlockStateProvider {
                 .getExistingFile(this.modLoc("block/chalk_glyph/chalk_glyph"));
         this.getVariantBuilder(block)
                 .forAllStatesExcept(state -> {
-                    //this is called for every state combination
-                    //create a child model for each glyph texture option
                     int sign = state.getValue(PrismaticGlyphBlock.SIGN);
                     ModelFile subModel = this.models().getBuilder("block/chalk_glyph/" + sign).parent(parent)
                             .texture("texture", this.modLoc("block/chalk_glyph/" + sign));
-
                     return ConfiguredModel.builder()
-                            //load the child model
                             .modelFile(subModel)
-                            //
-                            .rotationY((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING)
-                                    .toYRot())
+                            .rotationY((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot())
                             .build();
                 }, PrismaticGlyphBlock.COLOR);
+    }
+    protected void generateMulticoloredGlyphBlockState(Block block) {
+        ModelFile.ExistingModelFile parent = this.models()
+                .getExistingFile(this.modLoc("block/chalk_glyph/chalk_glyph"));
+        this.getVariantBuilder(block)
+                .forAllStatesExcept(state -> {
+                    int sign = state.getValue(MulticoloredGlyphBlock.SIGN);
+                    ModelFile subModel = this.models().getBuilder("block/chalk_glyph/" + sign).parent(parent)
+                            .texture("texture", this.modLoc("block/chalk_glyph/" + sign));
+                    return ConfiguredModel.builder().modelFile(subModel)
+                            .rotationY((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot())
+                            .build();
+                }, MulticoloredGlyphBlock.COLOR);
+    }
+    protected void generateChosenGlyphBlockState(Block block) {
+        ModelFile.ExistingModelFile parent = this.models()
+                .getExistingFile(this.modLoc("block/chalk_glyph/chalk_glyph"));
+        this.getVariantBuilder(block)
+                .forAllStatesExcept(state -> {
+                    int sign = state.getValue(MulticoloredGlyphBlock.SIGN);
+                    ModelFile subModel = this.models().getBuilder("block/chalk_glyph/" + sign).parent(parent)
+                            .texture("texture", this.modLoc("block/chalk_glyph/" + sign));
+                    return ConfiguredModel.builder().modelFile(subModel)
+                            .rotationY((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot())
+                            .build();
+                }, ChosenGlyphBlock.CYCLE);
     }
 }

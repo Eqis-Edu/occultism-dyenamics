@@ -12,6 +12,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.data.ModelData;
+import org.jetbrains.annotations.NotNull;
 
 public class ChosenGlyphRenderer implements BlockEntityRenderer<ChosenGlyphBlockEntity> {
 
@@ -19,7 +20,7 @@ public class ChosenGlyphRenderer implements BlockEntityRenderer<ChosenGlyphBlock
 
     @Override
     public void render(ChosenGlyphBlockEntity be, float partialTick, PoseStack poseStack,
-                       MultiBufferSource bufferSource, int packedLight, int packedOverlay) {
+                       @NotNull MultiBufferSource bufferSource, int packedLight, int packedOverlay) {
 
         poseStack.pushPose();
 
